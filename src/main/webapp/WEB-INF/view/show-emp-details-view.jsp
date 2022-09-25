@@ -13,6 +13,8 @@ Your surname: ${employee.surname}
 <br>
 Your salary: ${employee.salary}
 
+<%--Here I can see the next page with parameters of the last Employee object.--%>
+<%--Because of @ModelAttribute("employee") Employee emp, I can update these parameters.--%>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
 <br>
 
 <a href="askDetails">Please write your details</a>
+<%--This form get the link to askDetails controller from firstView page--%>
 </body>
 
 </html>
