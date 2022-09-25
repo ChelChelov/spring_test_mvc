@@ -7,7 +7,11 @@
 <br>
 <br>
 
-Your name: ${param.employeeName}
+<%--Your name: ${param.employeeName}--%>
+
+Your name: ${nameAttribute}
+<%--this.nameAttribute must be like:
+model.addAttribute("nameAttribute", empName);--%>
 
 </body>
 
