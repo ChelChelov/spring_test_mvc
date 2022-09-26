@@ -15,6 +15,8 @@ public class Employee {
     private String surname;
     private int salary;
     private String department;
+    private String carBrand;
+    private Map<String, String> carBrands;
     private Map<String, String> departments;
 
     public Employee() {
@@ -22,5 +24,10 @@ public class Employee {
         departments.put("IT", "Information Technology");
         departments.put("HR", "Human Resources");
         departments.put("Sales", "Sales");
+
+        carBrands = new HashMap<>();
+        carBrands.put("Audi", "Audi");
+        carBrands.put("Mercedes-Benz", "MB");
+        carBrands.put("BMW", "BMW");
     }
 }
