@@ -16,6 +16,16 @@
     <br><br>
     Salary <form:input path="salary"/>
     <br><br>
+    Department <form:select path="department">
+
+<%--    <form:option value="Information Technology" label="IT"/>--%>
+<%--    <form:option value="Human Resources" label="HR"/>--%>
+<%--    <form:option value="Sales" label="Sales"/>--%>
+<%--    It's a hardcode variant to write--%>
+
+    <form:options items="${employee.departments}"/>
+    </form:select>
+    <br><br>
 
     <input type="submit" value="OK">
 
@@ -27,6 +37,8 @@
 <%--In controller, I use "model.addAttribute" to do it.--%>
 <%--modelAttribute must be equals: modelAttribute="employee" and the same in controller model.addAttribute("employee", new Employee());--%>
 <%--And the next action will be the page "showDetails"--%>
+
+<%--"form: select" shows a dropdown list--%>
 </body>
 
 </html>
