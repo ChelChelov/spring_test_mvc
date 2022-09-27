@@ -2,16 +2,21 @@ package com.olegsazonov.spring.mvc;
 
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
-
 
 @Getter
 @Setter
 @ToString
 @EqualsAndHashCode
 public class Employee {
+    @Size(min = 2, max = 16, message = "name must be between 2 and 16 symbols")
     private String name;
+//    @NotEmpty(message = "surname is required field")
+    @NotBlank(message = "surname is required field")
     private String surname;
     private int salary;
     private String department;
