@@ -28,6 +28,9 @@ Your language(s):
     </c:forEach>
 
 </ul>
+
+Phone number: ${employee.phoneNumber}
+
 <%--It's strange but it's works like: Your language(s):${employee.languages}--%>
 
 

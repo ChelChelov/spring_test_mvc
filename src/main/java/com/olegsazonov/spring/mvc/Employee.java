@@ -2,9 +2,7 @@ package com.olegsazonov.spring.mvc;
 
 import lombok.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,9 +16,13 @@ public class Employee {
 //    @NotEmpty(message = "surname is required field")
     @NotBlank(message = "surname is required field")
     private String surname;
+    @Min(value = 300, message = "must be greater than 299")
+    @Max(value = 5000, message = "must be less than 5001")
     private int salary;
     private String department;
     private String carBrand;
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XXX-XX-XX")
+    private String phoneNumber;
     private String[] languages;
     private Map<String,String> mapLanguages;
     private Map<String, String> carBrands;
