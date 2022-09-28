@@ -29,13 +29,17 @@ Your language(s):
 
 </ul>
 
-Phone number: ${employee.phoneNumber}
+Your phone number: ${employee.phoneNumber}
+<br>
+Your email: ${employee.email}
+</body>
+
+</html>
+
+
 
 <%--It's strange but it's works like: Your language(s):${employee.languages}--%>
 
 
 <%--Here I can see the next page with parameters of the last Employee object.--%>
 <%--Because of @ModelAttribute("employee") Employee emp, I can update these parameters.--%>
-</body>
-
-</html>

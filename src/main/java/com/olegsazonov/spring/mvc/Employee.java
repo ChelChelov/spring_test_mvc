@@ -1,5 +1,6 @@
 package com.olegsazonov.spring.mvc;
 
+import com.olegsazonov.spring.mvc.validation.CheckEmail;
 import lombok.*;
 
 import javax.validation.constraints.*;
@@ -23,6 +24,8 @@ public class Employee {
     private String carBrand;
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XXX-XX-XX")
     private String phoneNumber;
+    @CheckEmail
+    private String email;
     private String[] languages;
     private Map<String,String> mapLanguages;
     private Map<String, String> carBrands;
